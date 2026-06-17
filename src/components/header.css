@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  top: 0px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  padding: 0 100px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.logo {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.header-right {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  column-gap: 16px;
+  font-size: 17px;
+  color: rgb(217, 161, 101);
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+}
+
+.header-right div:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
