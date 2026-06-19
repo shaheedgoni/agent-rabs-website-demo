@@ -1,0 +1,56 @@
+.why-us-container {
+  height: 100vh;
+  padding: 100px;
+  background-color: #f5efe8;
+}
+
+.why-us-heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.heading-why-us {
+  font-size: 84px;
+  max-width: 700px;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  line-height: 1.1;
+  font-family: "Butler";
+  margin-bottom: 80px;
+  max-width: 1100px;
+}
+
+.cards-layout-why-us {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 25px;
+  row-gap: 25px;
+}
+
+.card-why-us {
+  background-color: rgb(252, 247, 241);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: rgb(232, 223, 212) solid 2px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.card-why-us span {
+  font-style: "Butler";
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.card-why-us p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(148, 141, 133);
+  max-width: 300px;
+  font-size: 16px;
+  line-height: 1.5;
+}

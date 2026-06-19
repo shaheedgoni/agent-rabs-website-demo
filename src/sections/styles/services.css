@@ -1,0 +1,60 @@
+.services-container {
+  background-color: rgb(11, 10, 9);
+  color: white;
+  height: 100vh;
+  padding: 100px;
+}
+
+.heading-services {
+  font-size: 84px;
+  max-width: 700px;
+  color: rgb(245, 239, 232);
+  font-weight: bold;
+  line-height: 1.1;
+  font-family: "Butler";
+  margin-bottom: 30px;
+}
+
+.cards-layout-services {
+  display: flex;
+  column-gap: 20px;
+}
+
+.card-services {
+  background-color: rgb(20, 18, 16);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: rgb(26, 23, 21) solid 2px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.card-services span {
+  font-style: "Butler";
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.card-services p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(148, 141, 133);
+  max-width: 300px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-bottom: solid #2a2521 2px;
+  padding-bottom: 16px;
+}
+
+.card-services div {
+  color: #dea368;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 24px;
+}
+
+.card-services div:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
