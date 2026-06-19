@@ -1,7 +1,7 @@
 .about-container {
   padding: 100px;
   background-color: #f5efe8;
-  height: 100vh;
+  height: 100%;
 }
 
 .layout-setup {
@@ -9,15 +9,8 @@
   justify-content: space-between;
 }
 
-.heading-about {
-  font-size: 84px;
+.about-heading-layout {
   max-width: 500px;
-  color: black;
-  font-weight: bold;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-  line-height: 1.1;
-  font-family: "Butler";
-  margin-bottom: 20px;
 }
 
 .about-pic {

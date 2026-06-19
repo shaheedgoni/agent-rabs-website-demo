@@ -3,6 +3,8 @@ import Hero from "./sections/hero";
 import About from "./sections/about";
 import Services from "./sections/services";
 import WhyUs from "./sections/whyUs";
+import Testmonials from "./sections/testimonials";
+import Contact from "./sections/contact";
 import "./App.css";
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <About />
       <Services />
       <WhyUs />
+      <Testmonials />
+      <Contact />
     </>
   );
 }

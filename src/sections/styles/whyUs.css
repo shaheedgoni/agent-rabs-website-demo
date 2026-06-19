@@ -1,5 +1,5 @@
 .why-us-container {
-  height: 100vh;
+  height: 100%;
   padding: 100px;
   background-color: #f5efe8;
 }
@@ -11,15 +11,7 @@
   width: 100%;
 }
 
-.heading-why-us {
-  font-size: 84px;
-  max-width: 700px;
-  color: rgb(0, 0, 0);
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-  font-weight: bold;
-  line-height: 1.1;
-  font-family: "Butler";
-  margin-bottom: 80px;
+.why-us-heading-layout {
   max-width: 1100px;
 }
 
@@ -42,7 +34,7 @@
 
 .card-why-us span {
   font-style: "Butler";
-  font-size: 26px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -50,7 +42,17 @@
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(148, 141, 133);
-  max-width: 300px;
-  font-size: 16px;
+
+  font-size: 20px;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 1100px) {
+  .why-us-container {
+    height: 100%;
+  }
+
+  .cards-layout-why-us {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

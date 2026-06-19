@@ -7,10 +7,11 @@ function Services() {
     <section className="services-container">
       <div>
         <div className="page-header">What we do</div>
-        <div className="heading-services">
-          Property services,{" "}
-          <span className="title-highlight">done properly</span>
+        <div className="services-heading-layout heading-white">
+          Property services,
+          <span className="title-highlight"> done properly</span>
         </div>
+
         <div className="description">
           From the first viewing to the final signature, we handle every step.
           Six ways we help you buy, sell, and own with confidence.

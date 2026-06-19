@@ -11,9 +11,11 @@ function About() {
 
       <div className="layout-setup">
         <div className="about-left">
-          <div className="heading-about">
-            Built on <span className="title-highlight">partnership,</span> not
-            just paperwork
+          <div className="about-heading-layout">
+            <div className="heading-black">
+              Built on <span className="title-highlight">partnership,</span> not
+              just paperwork
+            </div>
           </div>
 
           <div className="description">

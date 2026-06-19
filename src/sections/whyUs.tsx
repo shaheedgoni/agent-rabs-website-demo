@@ -8,7 +8,7 @@ function WhyUs() {
       <div className="why-us-heading">
         <div>
           <div className="page-header">Why Choose Us</div>
-          <div className="heading-why-us">
+          <div className="why-us-heading-layout heading-black">
             The agent you'd recommend to family
           </div>
         </div>
@@ -42,7 +42,7 @@ function WhyUs() {
         />
         <Card
           title="A relationship, not a sale"
-          desc="After the keys change hands we stay reachable for whatever comes next."
+          desc="We push hard on your behalf and walk away when a deal is wrong for you."
           className="card-why-us"
         />
       </div>
