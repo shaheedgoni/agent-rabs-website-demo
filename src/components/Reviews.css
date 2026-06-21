@@ -27,6 +27,7 @@
   color: rgb(217, 161, 101);
   font-size: 22px;
   margin-right: 20px;
+  cursor: default;
 }
 
 .user-info {

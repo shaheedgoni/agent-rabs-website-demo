@@ -6,15 +6,22 @@ import "../App.css";
 
 function About() {
   return (
-    <section className="about-container" id="#about">
-      <div className="page-header">About Us</div>
+    <section className="white-container page" id="about">
+      <h2 className="page-header">About Us</h2>
 
       <div className="layout-setup">
         <div className="about-left">
           <div className="about-heading-layout">
             <div className="heading-black">
-              Built on <span className="title-highlight">partnership,</span> not
-              just paperwork
+              <span style={{ "--i": 0 } as React.CSSProperties}>Built on</span>
+              <span
+                className="title-highlight"
+                style={{ "--i": 1 } as React.CSSProperties}
+              >
+                partnership,
+              </span>
+              <span style={{ "--i": 2 } as React.CSSProperties}>not just</span>
+              <span style={{ "--i": 3 } as React.CSSProperties}>paperwork</span>
             </div>
           </div>
 
@@ -24,7 +31,9 @@ function About() {
             biggest decisions they'll make.
           </div>
 
-          <OrangeButton name="Read More" />
+          <div className="read-more-button">
+            <OrangeButton name="Read More" />
+          </div>
         </div>
 
         <div className="about-right">

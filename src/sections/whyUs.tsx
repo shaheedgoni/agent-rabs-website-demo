@@ -4,13 +4,13 @@ import "../App.css";
 
 function WhyUs() {
   return (
-    <section className="why-us-container">
+    <section className="white-container page" id="whyus">
       <div className="why-us-heading">
         <div>
-          <div className="page-header">Why Choose Us</div>
-          <div className="why-us-heading-layout heading-black">
+          <h2 className="page-header">Why Choose Us</h2>
+          <h2 className="why-us-heading-layout heading-black">
             The agent you'd recommend to family
-          </div>
+          </h2>
         </div>
       </div>
 

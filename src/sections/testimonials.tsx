@@ -6,13 +6,13 @@ import "./styles/testimonials.css";
 function Testmonials() {
   return (
     <>
-      <section className="testimonials-container">
+      <section className="black-container page" id="testimonials">
         <div>
-          <div className="page-header">What clients say</div>
+          <h2 className="page-header">What clients say</h2>
 
-          <div className="testimonial-heading-layout heading-white">
+          <h2 className="testimonial-heading-layout heading-white">
             Trusted with their biggest decisions
-          </div>
+          </h2>
         </div>
 
         <div className="review-layout">

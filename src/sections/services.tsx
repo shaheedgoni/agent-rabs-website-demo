@@ -4,13 +4,13 @@ import "../App.css";
 
 function Services() {
   return (
-    <section className="services-container">
+    <section className="black-container page" id="services">
       <div>
-        <div className="page-header">What we do</div>
-        <div className="services-heading-layout heading-white">
+        <h2 className="page-header">What we do</h2>
+        <h2 className="services-heading-layout  heading-white">
           Property services,
           <span className="title-highlight"> done properly</span>
-        </div>
+        </h2>
 
         <div className="description">
           From the first viewing to the final signature, we handle every step.

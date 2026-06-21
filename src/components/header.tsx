@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import OrangeButton from "./OrangeButton";
 import logo from "../assets/logo.png";
 import "./header.css";
+import "../App.css";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,16 +21,20 @@ function Header() {
 
   return (
     <div className={scrolled ? "header scrolled" : "header"}>
-      <img src={logo} className="logo" />
+      <a href="#hero">
+        <img src={logo} className="logo" />
+      </a>
 
       <div className="header-right">
-        <div>About</div>
-        <div>Services</div>
-        <div>Why Us</div>
-        <div>Testimonials</div>
-        <div>Contact</div>
+        <nav className="links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#whyus">Why Us</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-        <OrangeButton name="WhatsApp Us" />
+        <OrangeButton name="WhatsApp Us" className="whatsapp-us" />
 
         <img
           src="https://api.iconify.design/material-symbols:menu.svg?color=%23D9A165"

@@ -1,13 +1,14 @@
-import "./OrangeButton.css";
+import "../App.css";
 
 interface OrangeButtonProps {
   name: string;
+  className?: string;
 }
 
-function OrangeButton({ name }: OrangeButtonProps) {
+function OrangeButton({ name, className = "" }: OrangeButtonProps) {
   return (
     <>
-      <button className="orange-button">{name}</button>
+      <button className={`${className} orange-button`}>{name}</button>
     </>
   );
 }
