@@ -3,8 +3,7 @@
   overflow: hidden;
   padding-bottom: 4px;
   margin-bottom: 8px;
-}
-.about-heading-layout span.is-visible {
+
   animation: slideUpLine 1s cubic-bezier(0.1, 0.76, 0.55, 0.94) both;
   animation-delay: calc(var(--i) * 0.2s);
 }
@@ -29,14 +28,11 @@
 }
 
 .about-pic {
-  width: 100%;
+  max-height: 580px;
   object-fit: cover;
   border-radius: 20px;
 
   animation: fadeIn 1s 0.67s both;
-}
-
-.read-more-button {
 }
 
 @media screen and (max-width: 1100px) {
@@ -46,15 +42,7 @@
   .about-left {
     margin-bottom: 40px;
   }
-}
-
-@keyframes slideUpLine {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  .about-pic {
+    width: 200px;
   }
 }

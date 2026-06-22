@@ -5,11 +5,24 @@ interface ReviewsProps {
   userName?: string;
   userDescription?: string;
   userPp?: string;
+  dataAos?: string;
+  dataAosDelay?: string;
 }
 
-function Reviews({ comment, userPp, userName, userDescription }: ReviewsProps) {
+function Reviews({
+  comment,
+  userPp,
+  userName,
+  userDescription,
+  dataAos,
+  dataAosDelay,
+}: ReviewsProps) {
   return (
-    <div className="review-card">
+    <div
+      className="review-card"
+      data-aos={dataAos}
+      data-aos-delay={dataAosDelay}
+    >
       <div style={{ display: "flex", gap: "5px", marginBottom: "18px" }}>
         {[...Array(5)].map((_, index) => (
           <svg

@@ -1,24 +1,87 @@
+import { useState, type ChangeEvent } from "react";
 import "./styles/contact.css";
 import "../App.css";
 import OrangeButton from "../components/OrangeButton";
 
+type FormState = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  interest: string;
+  message: string;
+};
+
+type FormErrors = Partial<Record<keyof FormState, string>>;
+
+type FormField = keyof FormState;
+
+type FieldElement = HTMLInputElement | HTMLSelectElement;
+
 function Contact() {
+  const [form, setForm] = useState<FormState>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    interest: "placeholder",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const handleChange = (field: FormField) => (e: ChangeEvent<FieldElement>) => {
+    const { value } = e.target;
+    setForm((prev) => ({ ...prev, [field]: value }));
+    setErrors((prev) => ({ ...prev, [field]: "" }));
+  };
+
+  const validate = (): boolean => {
+    const newErrors: FormErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!form.firstName.trim()) {
+      newErrors.firstName = "First name is required.*";
+    }
+    if (!form.lastName.trim()) {
+      newErrors.lastName = "Last name is required.*";
+    }
+    if (!form.email.trim()) {
+      newErrors.email = "Please enter your email address.*";
+    } else if (!emailRegex.test(form.email.trim())) {
+      newErrors.email = "Please enter a valid email address.*";
+    }
+    if (!form.message.trim()) {
+      newErrors.message = "Please type a message.*";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (): void => {
+    if (validate()) {
+      // All fields valid — handle the enquiry submission here
+      console.log("Form submitted:", form);
+    }
+  };
+
   return (
-    <section className="black-container contact-border page" id="contact">
+    <section className="white-container contact-border page" id="contact">
       <h2 className="page-header">Contact us</h2>
       <div className="contact-layout ">
         <div>
           <div className="heading-layout-contact">
-            <h2 className="heading-white">Let's find your next address</h2>
+            <h2 className="heading-black" data-aos="fade-right">
+              Let's find your next address
+            </h2>
           </div>
 
-          <p className="description">
+          <p className="description" data-aos="fade-right" data-aos-delay="100">
             Tell us what you're looking for and a named agent will be in touch
             within one business day. No call centres, no run-around.
           </p>
 
           <div className="contact-info">
-            <div>
+            <div data-aos="fade-right" data-aos-delay="300">
               <svg
                 xmlns="http://w3.org"
                 viewBox="0 0 24 24"
@@ -33,7 +96,7 @@ function Contact() {
               </svg>
               <p>+23480123456</p>
             </div>
-            <div>
+            <div data-aos="fade-right" data-aos-delay="450">
               <svg
                 xmlns="http://w3.org"
                 viewBox="0 0 24 24"
@@ -50,7 +113,7 @@ function Contact() {
 
               <p>agentrabs123@gmail.com</p>
             </div>
-            <div>
+            <div data-aos="fade-right" data-aos-delay="600">
               <svg
                 xmlns="http://w3.org"
                 viewBox="0 0 24 24"
@@ -70,29 +133,52 @@ function Contact() {
           </div>
         </div>
 
-        <div className="fill-form">
+        <div className="fill-form" data-aos="fade-left">
           <div className="full-name">
             <div>
               <label>FIRST NAME</label>
-              <input className="type-in" type="text" />
-              <p className="error-fill">First name is required.*</p>
+              <input
+                className="type-in-contact"
+                type="text"
+                value={form.firstName}
+                onChange={handleChange("firstName")}
+              />
+              {errors.firstName && (
+                <p className="error-fill">{errors.firstName}</p>
+              )}
             </div>
             <div>
               <label>LAST NAME</label>
-              <input className="type-in" type="text" />
-              <p className="error-fill">Last name is required.*</p>
+              <input
+                className="type-in-contact"
+                type="text"
+                value={form.lastName}
+                onChange={handleChange("lastName")}
+              />
+              {errors.lastName && (
+                <p className="error-fill">{errors.lastName}</p>
+              )}
             </div>
           </div>
 
           <div className="fill-container">
             <label>EMAIL</label>
-            <input className="type-in" type="text" />
-            <p className="error-fill">Please enter your email address.*</p>
+            <input
+              className="type-in-contact"
+              type="text"
+              value={form.email}
+              onChange={handleChange("email")}
+            />
+            {errors.email && <p className="error-fill">{errors.email}</p>}
           </div>
 
           <div className="fill-container">
             <label>I'M INTERESTED IN</label>
-            <select className="type-in" defaultValue="placeholder">
+            <select
+              className="type-in-contact"
+              value={form.interest}
+              onChange={handleChange("interest")}
+            >
               <option disabled value="placeholder">
                 --Select an option--
               </option>
@@ -106,12 +192,17 @@ function Contact() {
 
           <div className="fill-container">
             <label>MESSAGE</label>
-            <input className="type-in" type="text" />
-            <p className="error-fill">Please type a message.*</p>
+            <input
+              className="type-in-contact"
+              type="text"
+              value={form.message}
+              onChange={handleChange("message")}
+            />
+            {errors.message && <p className="error-fill">{errors.message}</p>}
           </div>
 
           <div className="fill-container">
-            <OrangeButton name="Send enquiry" />
+            <OrangeButton name="Send enquiry" onClick={handleSubmit} />
           </div>
         </div>
       </div>

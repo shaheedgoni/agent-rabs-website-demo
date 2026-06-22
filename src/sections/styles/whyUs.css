@@ -24,6 +24,14 @@
   border: rgb(232, 223, 212) solid 2px;
   border-radius: 10px;
   cursor: default;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.card-why-us:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.06);
 }
 
 .card-why-us span {

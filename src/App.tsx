@@ -7,9 +7,15 @@ import Testmonials from "./sections/testimonials";
 import Contact from "./sections/contact";
 import Footer from "./sections/footer";
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: false });
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
