@@ -5,6 +5,7 @@
   padding: 42px;
   font-family: Arial, Helvetica, sans-serif;
   border: rgb(26, 23, 21) solid 2px;
+  justify-content: space-between;
   border-radius: 10px;
 }
 

@@ -23,6 +23,15 @@ const REVIEWS: ReviewsProps[] = [
     dataAos: "fade-up",
     dataAosDelay: "300",
   },
+  {
+    comment:
+      "I invest from abroad and they manage everything. First agent I have actually trusted with my money",
+    userPp: "FB",
+    userName: "Fatima B.",
+    userDescription: "Investor, Abuja",
+    dataAos: "fade-up",
+    dataAosDelay: "400",
+  },
 ];
 
 function Testmonials() {
@@ -41,17 +50,9 @@ function Testmonials() {
         </div>
 
         <div className="review-layout">
-          {REVIEWS.map((oneReview) => (
-            <Reviews {...oneReview} />
+          {REVIEWS.map((oneReview, index) => (
+            <Reviews {...oneReview} key={index} />
           ))}
-          <Reviews
-            comment="I invest from abroad and they manage everything. First agent I have actually trusted with my money"
-            userPp="FB"
-            userName="Fatima B."
-            userDescription="Investor, Abuja"
-            dataAos="fade-up"
-            dataAosDelay="400"
-          />
         </div>
       </section>
     </>

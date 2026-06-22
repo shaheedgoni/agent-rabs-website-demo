@@ -12,6 +12,7 @@ a {
   display: block;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.2s;
+  outline: none;
   text-decoration: none;
   color: inherit;
   cursor: pointer;

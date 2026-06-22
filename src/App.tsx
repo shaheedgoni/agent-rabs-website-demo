@@ -13,7 +13,7 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 800, once: false });
+    AOS.init({ duration: 500, once: false });
   }, []);
 
   return (

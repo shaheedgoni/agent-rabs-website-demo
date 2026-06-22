@@ -19,6 +19,7 @@
 .card-why-us {
   background-color: rgb(252, 247, 241);
   display: flex;
+  height: 100%;
   flex-direction: column;
   padding: 30px;
   border: rgb(232, 223, 212) solid 2px;
