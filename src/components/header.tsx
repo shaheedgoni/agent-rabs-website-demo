@@ -46,7 +46,10 @@ function Header() {
               <a href="#contact">Contact</a>
             </nav>
 
-            <a href="#contact">
+            <a
+              href="https://wa.me/2348012345678?text=Hey!, I want to enquire on a property"
+              target="_blank"
+            >
               <OrangeButton name="WhatsApp Us" className="whatsapp-us" />
             </a>
 

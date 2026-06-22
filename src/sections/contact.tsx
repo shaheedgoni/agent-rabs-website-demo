@@ -11,7 +11,7 @@ type FormState = {
   message: string;
 };
 
-type FormErrors = Partial<Record<keyof FormState, string>>;
+type FormErrors = Partial<FormState>;
 
 type FormField = keyof FormState;
 

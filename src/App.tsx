@@ -16,24 +16,6 @@ function App() {
     AOS.init({ duration: 800, once: false });
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            console.log("set");
-            entry.target.classList.add("is-visible");
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    const pageElements = document.querySelectorAll<HTMLElement>(".page");
-    pageElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
   return (
     <>
       <Header />

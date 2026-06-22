@@ -1,13 +1,5 @@
+import type { ReviewsProps } from "../types/review";
 import "./Reviews.css";
-
-interface ReviewsProps {
-  comment: string;
-  userName?: string;
-  userDescription?: string;
-  userPp?: string;
-  dataAos?: string;
-  dataAosDelay?: string;
-}
 
 function Reviews({
   comment,
