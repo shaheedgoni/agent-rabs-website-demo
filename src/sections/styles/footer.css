@@ -16,8 +16,6 @@ footer {
   display: flex;
 }
 
-.footer-right {
-}
 .logo-footer {
   width: 300px;
 }
@@ -58,6 +56,9 @@ footer {
 }
 
 @media screen and (max-width: 990px) {
+  footer {
+    padding: 20px;
+  }
   .footer-container {
     flex-direction: column;
     padding: 0;
@@ -69,5 +70,11 @@ footer {
 
   .subscribe-footer {
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logo-footer {
+    width: 100%;
   }
 }
