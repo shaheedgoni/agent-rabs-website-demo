@@ -45,6 +45,10 @@ footer {
   font-weight: bold;
 }
 
+.subscribe-footer {
+  margin-top: 20px;
+}
+
 .end-info .type-in {
   min-width: 300px;
   margin-right: 6px;
@@ -66,10 +70,6 @@ footer {
 
   .footer-right {
     margin-top: 50px;
-  }
-
-  .subscribe-footer {
-    margin-top: 20px;
   }
 }
 
